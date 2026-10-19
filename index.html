@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#8d234a">
+<meta name="description" content="A heartfelt romantic website from Naveen for Dr Anshu.">
+<title>Naveen ❤️ Dr Anshu — A Little Love Story</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="Go to home"><span class="brand-heart">♥</span> Naveen <span class="brand-for">for</span> Dr Anshu</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  <nav class="nav" id="mainNav">
+    <button class="nav-link active" data-page="home">Home</button>
+    <button class="nav-link" data-page="letter">Love Letter</button>
+    <button class="nav-link" data-page="surprises">10 Surprises</button>
+    <button class="nav-link" data-page="memories">Memories</button>
+    <button class="nav-link" data-page="final">Final Surprise</button>
+  </nav>
+</header>
+
+<main>
+  <section class="page active" id="home" aria-labelledby="home-title">
+    <div class="hero panel">
+      <div class="hero-sparkle">✦　♡　✦</div>
+      <p class="eyebrow">A little corner made with care</p>
+      <div class="hero-heart" aria-hidden="true">♥</div>
+      <h1 id="home-title">Naveen <span class="script">for</span><br><span class="name-highlight">Dr Anshu</span></h1>
+      <p class="hero-copy">Some people bring a little extra warmth into the world.<br>This small website is a thoughtful note, made just for you.</p>
+      <div class="button-row">
+        <button class="btn btn-primary" data-go="letter">Open My Heart <span>💌</span></button>
+        <button class="btn btn-glass" id="heartRainBtn">Send Some Hearts <span>💗</span></button>
+      </div>
+      <div class="hero-bottom"><span>Made with</span> <span class="tiny-heart">♥</span> <span>by Naveen</span></div>
+    </div>
+    <div class="three-cards">
+      <article class="mini-card"><div class="mini-icon">🌷</div><h3>A gentle wish</h3><p>May today bring you a peaceful moment and a reason to smile.</p><button class="text-button" data-note="wishNote">Open wish ↗</button></article>
+      <article class="mini-card"><div class="mini-icon">✨</div><h3>A little sparkle</h3><p>Small kind things can make an ordinary day feel special.</p><button class="text-button" data-note="sparkleNote">Reveal sparkle ↗</button></article>
+      <article class="mini-card"><div class="mini-icon">💌</div><h3>A note for you</h3><p>There is a heartfelt letter waiting on the next page.</p><button class="text-button" data-go="letter">Read letter ↗</button></article>
+    </div>
+    <div class="inline-note" id="wishNote">Your little wish will appear here.</div>
+    <div class="inline-note" id="sparkleNote">Your sparkle message will appear here.</div>
+    <div class="quote-panel"><span class="quote-mark">“</span><p>Kindness is a beautiful way to tell someone they matter.</p><span class="quote-mark closing">”</span></div>
+    <div class="center"><button class="btn btn-primary" data-go="surprises">Explore 10 little surprises →</button></div>
+  </section>
+
+  <section class="page" id="letter" aria-labelledby="letter-title">
+    <div class="section-heading"><p class="eyebrow">Page two · A note from the heart</p><h2 id="letter-title">A Letter for Dr Anshu <span>💌</span></h2><p class="section-subtitle">Take a little moment and open this letter.</p></div>
+    <div class="envelope-wrap">
+      <div class="envelope" id="envelope"><div class="envelope-flap"></div><div class="envelope-heart">♥</div><div class="envelope-label">To Dr Anshu</div></div>
+      <button class="btn btn-primary" id="openLetterBtn">Open the letter ✉</button>
+    </div>
+    <article class="letter-card" id="letterCard">
+      <div class="letter-top"><span>♡ A PERSONAL NOTE ♡</span><span>With warm wishes</span></div>
+      <h3>Dear Dr Anshu,</h3>
+      <p>I wanted to make something small but meaningful, simply to share a little warmth with you.</p>
+      <p>Some feelings do not need grand speeches. Sometimes they live in a sincere wish for your happiness, in hoping your day goes well, and in wanting life to bring you more peaceful moments and reasons to smile.</p>
+      <p>May your dreams keep growing, may your hard work bring you success, and may kindness find you wherever you go. I hope you always make time for the things that bring you joy and the people who make you feel appreciated.</p>
+      <p>This little website is my way of sending a thoughtful message your way. No pressure and no expectation—just a kind note made especially for you.</p>
+      <p>Keep smiling, keep shining, and take good care of yourself. You deserve good things and happy moments.</p>
+      <p class="letter-signature">With care and warm wishes,<br><span>Naveen ♥</span></p>
+      <div class="letter-stamp">MADE<br>WITH ♥</div>
+    </article>
+    <div class="button-row center-row">
+      <button class="btn btn-outline" id="readAgainBtn">Read it again ↻</button>
+      <button class="btn btn-primary" data-go="surprises">Next: 10 surprises →</button>
+      <button class="btn btn-soft" id="copyLetterBtn">Copy letter ⧉</button>
+    </div>
+    <p class="feedback" id="letterFeedback" aria-live="polite"></p>
+  </section>
+
+  <section class="page" id="surprises" aria-labelledby="surprises-title">
+    <div class="section-heading"><p class="eyebrow">Page three · Tap to discover</p><h2 id="surprises-title">10 Little Surprises <span>🌹</span></h2><p class="section-subtitle">Each button opens a different message for Dr Anshu.</p></div>
+    <div class="surprise-grid" id="surpriseGrid">
+      <button class="surprise-card" data-surprise="0"><span class="surprise-number">01</span><span class="surprise-emoji">😊</span><strong>A Smile</strong><small>Tap to reveal</small></button>
+      <button class="surprise-card" data-surprise="1"><span class="surprise-number">02</span><span class="surprise-emoji">🌟</span><strong>A Wish</strong><small>Tap to reveal</small></button>
+      <button class="surprise-card" data-surprise="2"><span class="surprise-number">03</span><span class="surprise-emoji">🌹</span><strong>A Rose</strong><small>Tap to reveal</small></button>
+      <button class="surprise-card" data-surprise="3"><span class="surprise-number">04</span><span class="surprise-emoji">🤗</span><strong>A Hug</strong><small>Tap to reveal</small></button>
+      <button class="surprise-card" data-surprise="4"><span class="surprise-number">05</span><span class="surprise-emoji">✨</span><strong>A Star</strong><small>Tap to reveal</small></button>
+      <button class="surprise-card" data-surprise="5"><span class="surprise-number">06</span><span class="surprise-emoji">💖</span><strong>A Compliment</strong><small>Tap to reveal</small></button>
+      <button class="surprise-card" data-surprise="6"><span class="surprise-number">07</span><span class="surprise-emoji">🌷</span><strong>A Promise</strong><small>Tap to reveal</small></button>
+      <button class="surprise-card" data-surprise="7"><span class="surprise-number">08</span><span class="surprise-emoji">💐</span><strong>A Thank You</strong><small>Tap to reveal</small></button>
+      <button class="surprise-card" data-surprise="8"><span class="surprise-number">09</span><span class="surprise-emoji">🍀</span><strong>Good Luck</strong><small>Tap to reveal</small></button>
+      <button class="surprise-card" data-surprise="9"><span class="surprise-number">10</span><span class="surprise-emoji">❤️</span><strong>One More</strong><small>Tap to reveal</small></button>
+    </div>
+    <div class="message-display" id="surpriseMessage" aria-live="polite"><span class="message-display-icon">💌</span><h3>Your message is waiting</h3><p>Tap any of the ten cards above to reveal a little surprise.</p></div>
+    <div class="button-row center-row">
+      <button class="btn btn-primary" id="randomSurpriseBtn">Choose for me 🎁</button>
+      <button class="btn btn-outline" id="resetSurprisesBtn">Reset cards ↻</button>
+      <button class="btn btn-soft" data-go="memories">Go to memories →</button>
+    </div>
+  </section>
+
+  <section class="page" id="memories" aria-labelledby="memories-title">
+    <div class="section-heading"><p class="eyebrow">Page four · Beautiful little moments</p><h2 id="memories-title">A Memory Garden <span>🌸</span></h2><p class="section-subtitle">Add your own photos and keep special moments together.</p></div>
+    <div class="memory-intro panel"><div class="memory-flower">🌼</div><h3>Little moments, lovely memories</h3><p>This page starts as a blank memory garden. You can add photos from your device; they stay in this browser session and are not uploaded anywhere.</p></div>
+    <div class="upload-panel">
+      <label class="upload-label" for="photoInput">Choose photos from your device</label>
+      <input id="photoInput" type="file" accept="image/*" multiple>
+      <p class="small-copy">Choose up to 8 photos. Personal photos are optional.</p>
+    </div>
+    <div class="memory-grid" id="memoryGrid">
+      <div class="memory-placeholder"><span>🌷</span><p>A happy moment</p></div>
+      <div class="memory-placeholder"><span>🌙</span><p>A peaceful evening</p></div>
+      <div class="memory-placeholder"><span>☀️</span><p>A bright new day</p></div>
+    </div>
+    <div class="card soft-card"><h3>Little memory note</h3><textarea id="memoryNote" rows="3" maxlength="500" placeholder="Write a kind message or a memory here…"></textarea><div class="button-row"><button class="btn btn-primary" id="saveMemoryNote">Save note in this page</button><button class="btn btn-outline" id="clearMemoryNote">Clear note</button></div><p id="memoryFeedback" class="feedback" aria-live="polite"></p></div>
+    <div class="center"><button class="btn btn-primary" data-go="final">Continue to the final surprise →</button></div>
+  </section>
+
+  <section class="page" id="final" aria-labelledby="final-title">
+    <div class="final-hero panel">
+      <div class="final-orbit orbit-one">♥</div><div class="final-orbit orbit-two">✦</div>
+      <p class="eyebrow">One last little surprise</p>
+      <div class="final-big-heart">💖</div>
+      <h2 id="final-title">Dr Anshu,<br><span class="name-highlight">You Are Special</span></h2>
+      <p class="hero-copy">May life bring you peaceful mornings, kind people, new opportunities, and countless reasons to smile.</p>
+      <div class="button-row">
+        <button class="btn btn-primary" id="finalSurpriseBtn">Open the final surprise 🎁</button>
+        <button class="btn btn-glass" id="finalHeartsBtn">Make it rain hearts 💕</button>
+      </div>
+      <div class="final-message" id="finalMessage" aria-live="polite"><span>✨</span><p>Your final message is waiting. Tap the button above.</p></div>
+      <div class="signature">With warm wishes,<br><strong>Naveen ♥</strong></div>
+    </div>
+    <div class="button-row center-row"><button class="btn btn-outline" data-go="home">↶ Back to beginning</button><button class="btn btn-soft" id="thankYouBtn">One more message 💗</button></div>
+    <div class="inline-note" id="thankYouNote">A little thank-you note will appear here.</div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="footer-heart">♥</div><p>Made with warmth by Naveen for Dr Anshu</p><p class="footer-small">A little kindness can make a day brighter.</p><button id="backToTop" class="back-top">Back to top ↑</button></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
